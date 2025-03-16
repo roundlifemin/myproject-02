@@ -1,8 +1,8 @@
 // CarList.js
 import React, { useEffect, useState } from 'react';
 import { firebasedb } from './firebaseConfig';
-import { getFirestore, collection, getDocs, addDoc} from "firebase/firestore";
-
+// import { getFirestore, collection, getDocs, addDoc} from "firebase/firestore";
+import {  collection, getDocs} from "firebase/firestore";
 
 const CarList = () => {
    const [cars, setCars] = useState([]);
