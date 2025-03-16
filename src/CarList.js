@@ -1,17 +1,14 @@
 // CarList.js
 import React, { useEffect, useState } from 'react';
 import { firebasedb } from './firebaseConfig';
-import { collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, getDocs, addDoc} from "firebase/firestore";
 
 
 const CarList = () => {
    const [cars, setCars] = useState([]);
 
-    useEffect( () => {
-    
-        
-        const fetchCars = async () => {      
-
+    useEffect( () => {  
+        const fetchCars = async () => {   
     const querySnapshot = await getDocs(collection(firebasedb, "car"));
     const carData = querySnapshot.docs.map(doc => ({
         id: doc.id,
