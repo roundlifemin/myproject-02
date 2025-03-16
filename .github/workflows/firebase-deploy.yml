@@ -28,5 +28,5 @@ jobs:
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MYPROJEC_02 }}"
-          entryPoint: "."
+          entryPoint: "."  # firebase이 있는 폴더 경로로 변경
           channelId: live
