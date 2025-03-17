@@ -5,8 +5,8 @@ import CarList from './CarList';
 
 function App() {
   return (
-    <div>
-        <h3>Firebase</h3>
+    <div>        
+        <h1>Firebase</h1>
         <CarList />
     </div>
 );
