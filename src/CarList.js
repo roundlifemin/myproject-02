@@ -23,6 +23,7 @@ const CarList = () => {
     return (
         <div>
             <h1>Car List</h1>
+            <h2>Firebase</h2>
             <ul>
                 {cars.map(car => (
                     <li key={car.id}>
