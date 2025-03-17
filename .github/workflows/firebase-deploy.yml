@@ -12,6 +12,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+     
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -21,19 +23,18 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build
-
-      - name: Install Firebase CLI
-        run: npm install -g firebase-tools
+        run: npm run build      
 
 
       - name: Print working directory
         run: pwd
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools 
 
       - name: Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MYPROJEC_02 }}"
-          entryPoint: "."  # firebase이 있는 폴더 경로로 변경
           channelId: live
