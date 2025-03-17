@@ -25,7 +25,10 @@ jobs:
 
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
-  
+
+
+      - name: Print working directory
+        run: pwd
 
       - name: Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
